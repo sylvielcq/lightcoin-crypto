@@ -70,21 +70,21 @@ const myAccount = new Account("snow-patrol");
 console.log('Starting balance:', myAccount.balance);
 
 // First withdrawal should fail
-t1 = new Withdrawal(50.25, myAccount);
+const t1 = new Withdrawal(50.25, myAccount);
 console.log('Committed? ', t1.commit());
 console.log('Transaction 1:', t1);
 
 console.log('My account balance:', myAccount.balance);
 
 // Deposit
-t2 = new Deposit(120.00, myAccount);
+const t2 = new Deposit(120.00, myAccount);
 console.log('Committed? ', t2.commit());
 console.log('Transaction 2:', t2);
 
 console.log('My account balance:', myAccount.balance);
 
 // 2nd withdrawal should succeed
-t3 = new Withdrawal(9.99, myAccount);
+const t3 = new Withdrawal(9.99, myAccount);
 console.log('Committed? ', t3.commit());
 console.log('Transaction 3:', t3);
 
